@@ -15,7 +15,7 @@ export function ResultDisplay({ result, originalImage }: ResultDisplayProps) {
       <div className="grid md:grid-cols-2 gap-6 p-6">
         <div className="space-y-4">
           <h3 className="text-lg font-medium text-dark-100 flex items-center space-x-2">
-            <ImageIcon className="w-5 h-5 text-accent-500" />
+            {/* <ImageIcon className="w-5 h-5 text-accent-500" /> */}
             <span>Original Image</span>
           </h3>
           <div className="relative group">
@@ -30,7 +30,7 @@ export function ResultDisplay({ result, originalImage }: ResultDisplayProps) {
         
         <div className="space-y-4">
           <h3 className="text-lg font-medium text-dark-100 flex items-center space-x-2">
-            <Sparkles className="w-5 h-5 text-accent-500" />
+            {/* <Sparkles className="w-5 h-5 text-accent-500" /> */}
             <span>Analysis Results</span>
           </h3>
           <div className="space-y-4 p-4 bg-dark-900/50 rounded-lg border border-dark-700">

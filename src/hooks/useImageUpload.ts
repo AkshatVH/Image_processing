@@ -10,17 +10,29 @@ export function useImageUpload() {
 
   const handleImageSelect = useCallback(async (file: File) => {
     try {
+      // Validate file type
+      const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
+      if (!validTypes.includes(file.type)) {
+        throw new Error('Please upload a valid image file (JPEG, PNG, or GIF)');
+      }
+
+      // Validate file size (max 16MB)
+      if (file.size > 16 * 1024 * 1024) {
+        throw new Error('Image size should be less than 16MB');
+      }
+
       setIsLoading(true);
       setError(null);
-      setOriginalImage(URL.createObjectURL(file));
+      
+      // Create object URL for preview
+      const objectUrl = URL.createObjectURL(file);
+      setOriginalImage(objectUrl);
       
       const result = await processImage(file);
-      setResult({
-        ...result,
-        processedAt: new Date().toISOString(),
-      });
+      setResult(result);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.message : 'An error occurred while processing the image');
+      setResult(null);
     } finally {
       setIsLoading(false);
     }
