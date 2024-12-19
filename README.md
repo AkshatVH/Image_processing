@@ -52,16 +52,16 @@ learning application. The key technologies used include:
 ****
 
 1. Download the repo as a zip file or clone it using the following command
-> https://github.com/AkshatVH/Image_processing.git
+    git clone https://github.com/AkshatVH/Image_processing.git
 2. Make sure you have node.js installed in your system
 3. Open your CLI,_ (I recommend using an seperate environment, if your planning it to use for development)_ and install the required libraries by the following command
-> pip install -r requirements.txt
-> npm install
+    pip install -r requirements.txt
+    npm install
 4. Run the following commands in the command line to get your flask app started
-> set FLASK_APP=main.py
-> python main.py
+    set FLASK_APP=main.py
+    python main.py
 5. Open another terminal in the project directory
-> npm run dev
+    npm run dev
 
 ## Contents
 
