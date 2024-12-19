@@ -11,9 +11,8 @@ export function useImageUpload() {
   const handleImageSelect = useCallback(async (file: File) => {
     try {
       // Validate file type
-      const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
-      if (!validTypes.includes(file.type)) {
-        throw new Error('Please upload a valid image file (JPEG, PNG, or GIF)');
+      if (!file.type.startsWith('image/')) {
+        throw new Error('Please upload a valid image file');
       }
 
       // Validate file size (max 16MB)
