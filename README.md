@@ -1,5 +1,5 @@
 # Detectique
-![Alt text](assest/first_site.png)
+![Alt text](assets/first_site.png)
 
 ## Introduction 
 
