@@ -1,5 +1,5 @@
 # Detectique
-![Alt text](first_site.png)
+![Alt text](assest/first_site.png)
 
 ## Introduction 
 
@@ -74,4 +74,9 @@ git clone https://github.com/AkshatVH/Image_processing.git
 
 ****
 
-p-5
+Three ways to uplaod the images!....:)
+![Alt text](assets/camera.png)
+![Alt text](assets/file_upload.png)
+![Alt text](assets/URL_.png)
+
+# (-- THANK YOU!! --)
